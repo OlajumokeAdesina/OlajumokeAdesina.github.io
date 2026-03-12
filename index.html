@@ -1,469 +1,616 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Olajumoke Adesina Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olajumoke Helen Adesina — Data Scientist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple-50: #F3EFFB;
+    --purple-100: #E0D6F6;
+    --purple-200: #C4B0EF;
+    --purple-300: #A48AE6;
+    --purple-400: #7C5DC9;
+    --purple-500: #5B3AAF;
+    --purple-600: #3E1F8C;
+    --purple-700: #2D1566;
+    --royal: #4B0082;
+    --royal-dark: #2D0050;
+    --pastel: #E8DEFF;
+    --pastel-mid: #C9B8F5;
+    --text: #111111;
+    --text-muted: #444;
+    --bg: #FAF8FF;
+    --white: #ffffff;
+    --border: rgba(75,0,130,0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+  }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class= "icon fa-home"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Olajumoke Helen Adesina</h1>
-								<p>Transforming Data into Insightful Solutions with Expertise in Data Science, Machine Learning and Academic Research.
-								</p>
-								<ul class="icons">
-									<li><a href="mailto:adesinahelen6@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="https://www.linkedin.com/in/olajumoke-adesina-910566177" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								</ul>
-							</article>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#Profile">Profile</a></li>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+  html { scroll-behavior: smooth; }
 
-				<!-- Main -->
-					<div id="main">
-<!-- Profile -->
-						<article id="Profile">
-							<h2 class="major">Profile</h2>
-							<span class="image main"><img src="images/IMG_1051.jpg" alt="" /></span>
-							<html>
-						
-    <head>
-        <style type="text/css">
-    .justify {
-  text-align: justify;
-  text-justify: inter-word; 
-  background-color: grey;
-  color: white;
-  border: 1px solid white;
-  margin: 20px;
-  padding: 20px;
-}
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
 
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 3rem;
+    background: rgba(232,222,255,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 600;
+    color: var(--royal); letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none; color: var(--text); font-size: 0.875rem;
+    font-weight: 400; letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--royal); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 3rem 5rem;
+    background:
+      radial-gradient(ellipse 60% 60% at 80% 30%, #D5C4F7 0%, transparent 65%),
+      radial-gradient(ellipse 40% 50% at 10% 70%, #EAE0FF 0%, transparent 60%),
+      var(--bg);
+  }
+  .hero-inner {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: var(--pastel);
+    color: var(--royal);
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.35rem 1rem; border-radius: 100px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--pastel-mid);
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--text); margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--royal); }
+  .hero-desc {
+    font-size: 1rem; color: var(--text-muted);
+    max-width: 420px; line-height: 1.8; margin-bottom: 2.5rem;
+  }
+  .hero-cta {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.75rem; border-radius: 100px;
+    font-size: 0.875rem; font-weight: 500;
+    text-decoration: none; transition: all 0.25s;
+    cursor: pointer; border: none;
+  }
+  .btn-primary {
+    background: var(--royal); color: #fff;
+  }
+  .btn-primary:hover { background: var(--royal-dark); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--royal);
+    border: 1.5px solid var(--royal);
+  }
+  .btn-outline:hover { background: var(--pastel); }
+
+  .hero-visual {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+  .stat-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    background: var(--pastel);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .stat-icon svg { width: 22px; height: 22px; stroke: var(--royal); fill: none; stroke-width: 1.8; }
+  .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.2rem; }
+  .stat-val { font-size: 1.1rem; font-weight: 500; color: var(--text); }
+
+  /* ─── SECTIONS ─── */
+  section { padding: 6rem 3rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--royal); margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300; color: var(--text);
+    line-height: 1.15; margin-bottom: 3rem;
+  }
+
+  /* ─── TECH STACK ─── */
+  #stack { background: white; }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+  .stack-card {
+    display: block; text-decoration: none;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    transition: all 0.25s; position: relative; overflow: hidden;
+    cursor: pointer;
+  }
+  .stack-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--royal), var(--pastel-mid));
+    opacity: 0; transition: opacity 0.25s;
+  }
+  .stack-card:hover { border-color: var(--purple-300); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(75,0,130,0.10); }
+  .stack-card:hover::before { opacity: 1; }
+  .stack-card.coming-soon { opacity: 0.65; cursor: default; }
+  .stack-card.coming-soon:hover { transform: none; box-shadow: none; }
+  .stack-badge {
+    display: inline-block; font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 0.2rem 0.65rem; border-radius: 100px;
+    margin-bottom: 1rem;
+  }
+  .badge-done { background: var(--pastel); color: var(--royal); }
+  .badge-wip { background: #FFF3CD; color: #856404; }
+  .stack-card-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--pastel); margin-bottom: 1rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .stack-card-icon svg { width: 22px; height: 22px; stroke: var(--royal); fill: none; stroke-width: 1.8; }
+  .stack-name { font-weight: 500; font-size: 1rem; color: var(--text); margin-bottom: 0.35rem; }
+  .stack-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+  .stack-arrow {
+    position: absolute; bottom: 1.5rem; right: 1.5rem;
+    color: var(--royal); font-size: 1rem; opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .stack-card:hover .stack-arrow { opacity: 1; transform: translate(2px,-2px); }
+
+  /* ─── EXPERIENCE ─── */
+  #experience { background: var(--bg); }
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .timeline-item {
+    display: grid; grid-template-columns: 180px 1px 1fr;
+    gap: 0 2rem; position: relative;
+  }
+  .tl-date {
+    text-align: right; padding: 1.75rem 0;
+    font-size: 0.8rem; color: var(--text-muted); font-weight: 400;
+    padding-top: 1.9rem;
+  }
+  .tl-line {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .tl-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--royal); flex-shrink: 0; margin-top: 2rem;
+  }
+  .tl-connector { flex: 1; width: 1px; background: var(--border); }
+  .timeline-item:last-child .tl-connector { display: none; }
+  .tl-content { padding: 1.75rem 0 2.5rem; }
+  .tl-role { font-weight: 500; font-size: 1rem; color: var(--text); }
+  .tl-company { font-size: 0.85rem; color: var(--royal); margin-bottom: 0.75rem; }
+  .tl-body { font-size: 0.875rem; color: var(--text-muted); line-height: 1.75; }
+
+  /* ─── SKILLS ─── */
+  #skills { background: white; }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .skill-group-title {
+    font-weight: 500; font-size: 0.85rem; color: var(--royal);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 1rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .skill-tag {
+    background: var(--pastel); color: var(--royal);
+    font-size: 0.78rem; font-weight: 400;
+    padding: 0.3rem 0.85rem; border-radius: 100px;
+    border: 1px solid var(--pastel-mid);
+  }
+
+  /* ─── EDUCATION ─── */
+  #education { background: var(--bg); }
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .edu-card {
+    background: white; border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 2rem;
+  }
+  .edu-year { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.75rem; }
+  .edu-degree { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+  .edu-school { font-size: 0.85rem; color: var(--royal); margin-bottom: 1rem; }
+  .edu-detail { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  /* ─── CONTACT ─── */
+  #contact {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 100%, #C9B8F5 0%, transparent 70%),
+      white;
+    text-align: center;
+  }
+  #contact .section-title { margin-bottom: 1rem; }
+  .contact-sub { font-size: 1rem; color: var(--text-muted); margin-bottom: 2.5rem; }
+  .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--royal-dark);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 80px 1px 1fr; }
+    .skills-grid, .edu-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
-<div class="justify">
-<h2>Professional Summary</h2>
-<p>Data Scientist with experience in the banking and not-for-profit sectors across the end-to-end data lifecycle, from data extraction and transformation using SQL and Azure Databricks to analytics, visualisation, and Machine Learning with Python and Power BI. <br>Experienced in delivering data-driven insights within regulated environments and collaborating through Azure DevOps. Currently pursuing the Microsoft Azure Data Scientist Associate certification to deepen expertise in scalable cloud-based ML solutions.</p>
-</div>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">O. H. Adesina</a>
+  <ul class="nav-links">
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<div class="justify">
-<h2>Professional Experience</h2>
-<h3>Data Scientist- First Bank, Nigeria	 September 2025 – Present</h3>
-<p>Built interactive Power BI dashboards to monitor product performance, data quality, and operational KPI’s for business stakeholders.
-<br>Improved data accuracy and reduced reporting time by 80% through the automation of validation and transformation processes.
-<br>Cloud and engineering (Azure Devops, Databricks), Python, Machine Learning, Power BI, SQL. </p>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">Data Scientist</span>
+      <h1>Olajumoke<br><em>Helen</em> Adesina</h1>
+      <p class="hero-desc">Transforming data into insightful solutions — spanning Data Science, Machine Learning, cloud engineering, and academic research across the banking and not-for-profit sectors.</p>
+      <div class="hero-cta">
+        <a href="#stack" class="btn btn-primary">View Projects</a>
+        <a href="mailto:adesinahelen6@outlook.com" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="stat-label">Current Role</div>
+          <div class="stat-val">Data Scientist — First Bank, Nigeria</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.8 19.79 19.79 0 0 1 1.63 3.2 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l1.08-1.08a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="stat-label">Education</div>
+          <div class="stat-val">MSc Applied AI & Data Analytics — Bradford</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div class="stat-label">ML Accuracy</div>
+          <div class="stat-val">98.5–99% — Dengue Drug Discovery Project</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h3>Application Support Analyst- CDP, London	 May 2024 – February 2025</h3>
-<p>Provided 2nd-line support for internal and external stakeholders, ensuring timely resolution of tickets and technical issues according to service level agreements (SLA’s).
+<!-- TECH STACK / PROJECTS -->
+<section id="stack">
+  <div class="section-inner">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Tech Stack &amp; Projects</h2>
+    <div class="stack-grid">
 
-<br>Developed user guides and supported user acceptance testing (UAT) for platform features.
+      <a class="stack-card" href="pages/ml-dengue.html">
+        <span class="stack-badge badge-done">Live Project</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12h4M18 12h4M12 2v4M12 18v4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/></svg>
+        </div>
+        <div class="stack-name">Python &amp; Machine Learning</div>
+        <div class="stack-desc">SVM &amp; Logistic Regression models predicting drug bioactivity against Dengue Virus — 98.5–99% accuracy.</div>
+        <span class="stack-arrow">↗</span>
+      </a>
 
-<br>Built a strong foundation in cross-functional communication and bug triage.</p>
+      <a class="stack-card" href="pages/excel-retail.html">
+        <span class="stack-badge badge-done">Live Project</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+        </div>
+        <div class="stack-name">Excel &amp; Data Analysis</div>
+        <div class="stack-desc">Online retail dataset analysis with interactive visualisations and an executive dashboard built in Excel.</div>
+        <span class="stack-arrow">↗</span>
+      </a>
 
-<h3>Junior Systems Analyst- CDP, London 	 April 2023 – April 2024</h3>
-<p>Utilised SQL to query and validate data for diagnostics and report automation.
-<br>Applied troubleshooting techniques to resolve integration issues between applications and external systems, utilising Postman API to validate data flows and ensure system interoperability.
-<br>Collaborated with developers to escalate and resolve back-end application errors.
-<br>Created and updated technical documentation covering data pipelines, reporting logic, and user journeys to support knowledge sharing and system continuity.</p>
+      <a class="stack-card" href="pages/tableau.html">
+        <span class="stack-badge badge-done">Live Project</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="8" height="8" rx="1"/><rect x="14" y="2" width="8" height="8" rx="1"/><rect x="2" y="14" width="8" height="8" rx="1"/><rect x="14" y="14" width="8" height="8" rx="1"/></svg>
+        </div>
+        <div class="stack-name">Tableau</div>
+        <div class="stack-desc">Interactive Superstore Sales dashboard with advanced visual analytics published on Tableau Public.</div>
+        <span class="stack-arrow">↗</span>
+      </a>
 
-<h3>Data Analytics and AI Associate- Intelance Digital Enablement Services            August 2022 – January 2023</h3>
-<p>Designed and created automations for Microsoft Dynamics 365 with Power Automate and Power Apps (Power Platform), significantly reducing data processing time and improving overall data pipeline efficiency.</p>
+      <a class="stack-card" href="pages/sql.html">
+        <span class="stack-badge badge-done">Live Project</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="stack-name">SQL &amp; Data Exploration</div>
+        <div class="stack-desc">MySQL queries for data exploration and manipulation on a grocery store dataset sourced from Kaggle.</div>
+        <span class="stack-arrow">↗</span>
+      </a>
 
-<h3>Laboratory Assistant- Chi Farms Limited, Nigeria                                          January 2020 – November 2020</h3>
-<p>Collected and processed food samples, ensuring accurate labelling and timely documentation of microbiological test results. 
-<br>Prepared culture media, inoculated Petri dishes for microbial analysis of food products.
-<br>Identified and recorded microbial colony growth in quality control samples.
-<br>Assisted in compiling and reviewing quality control reports to maintain product safety standards.
-<br>Enforced strict adherence to health and safety protocols within the laboratory environment.</p>
-<h3>Laboratory Assistant- MeCure Healthcare Limited, Nigeria                                      January 2018 – July 2018</h3>
-<p>Collected and prepared biological samples for diagnostic testing, including phlebotomy, with emphasis on precision and patient care.
-<br>Maintained and updated confidential patient records in compliance with data protection standards.
-</p>
-</div>
+      <a class="stack-card" href="pages/powerbi.html">
+        <span class="stack-badge badge-wip">Coming Soon</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="stack-name">Power BI</div>
+        <div class="stack-desc">Interactive dashboards for product performance, data quality KPIs and operational metrics — project coming soon.</div>
+      </a>
 
-<div class="justify">
-<h2>Technical Skills and Competencies</h2>
-<p>Laboratory and Biological Techniques: Nested PCR, RFLP, Gel Electrophoresis, Serial Dilution, Microbial Culture, Aseptic Techniques, Good Laboratory Practice (GLP), Molecular Surveillance of Infectious Diseases, Sample Preparation, Wet-Lab Diagnostics.
-<br>Data Science and Machine Learning: Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn), Supervised Machine Learning models (SVM, Binary Logistic Regression), Data pre-processing, feature engineering, and model evaluation.
-<br>Software and Tools: Power BI, Power Platform, Excel (Advanced), SQL (queries, data cleaning), Microsoft Office Suite, R programming language (statistical analysis), Visual Studio Code, Azure DevOps, JIRA (project tracking).</p>
-</div>
+      <a class="stack-card coming-soon" href="pages/azure.html">
+        <span class="stack-badge badge-wip">Coming Soon</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="stack-name">Azure &amp; Cloud Engineering</div>
+        <div class="stack-desc">Azure Databricks, DevOps pipelines and cloud-based ML deployments — project page coming soon.</div>
+      </a>
 
-<div class="justify">
-<h2>Education and Qualifications</h2>
-<h3>University of Bradford, United Kingdom September 2021 – December 2022</h3>
-<p>MSc Applied Artificial Intelligence and Data Analytics. Achieved Merit (with Honours).
-<br>Dissertation: The Application of Machine Learning Techniques in Computational Drug Discovery Using Biological Data.
-<br>Developed Machine Learning models (Support Vector Machine, Binary Logistic Regression) to classify drug-like molecules based on bioactivity against Dengue Virus serotype 2.
-<br>Pre-processed molecular descriptors and structured IC50 data using Python (Pandas, NumPy).
-<br>Built, trained, and evaluated ML models achieving 98.5% and 99% classification accuracy.
-<br>Conducted literature review on drug discovery pipelines and bioinformatics tools.
-<br>Applied model validation techniques and communicated findings through a comprehensive thesis.
-<br>Relevant Modules: Artificial Intelligence and Data Science, Applied Machine Learning and Big Data Strategy
-<br>Dissertation Supervisor: Dr. Olusoyi Ashaye</p>
-<h3>Redeemer’s University, Ede, Nigeria                                                                         August 2015 – June 2019</h3>
-<p>BSc Microbiology. Achieved Second Class Upper (2:1) with Honours.
-<br>Conducted undergraduate project research at the Institute of Genomics and Global Health (formerly the African Centre of Excellence for Genomics of Infectious Diseases (ACEGID)).
-<br>Collaborated with lab staff and supervisors on experimental design, sample processing, and data interpretation.
-<br>Performed nested PCR and RFLP on pre-extracted Plasmodium falciparum DNA samples to detect Y184F polymorphism in the MDR-1 gene.
-<br>Analysed RFLP results to identify resistance-linked mutations in the MDR-1 gene.
-<br>Determined the prevalence of wild-type and mutant alleles to assess chloroquine resistance.
-<br>Gained hands-on experience in wet-lab diagnostics and infectious disease research.
+      <a class="stack-card coming-soon" href="pages/r-stats.html">
+        <span class="stack-badge badge-wip">Coming Soon</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <div class="stack-name">R &amp; Statistical Analysis</div>
+        <div class="stack-desc">Statistical modelling and data analysis using R — project page coming soon.</div>
+      </a>
 
-<br>Supervisors: Professor Christian Happi and Dr. Tolulope Kayode</p>
-</div>
+      <a class="stack-card coming-soon" href="pages/bioinformatics.html">
+        <span class="stack-badge badge-wip">Coming Soon</span>
+        <div class="stack-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3"/></svg>
+        </div>
+        <div class="stack-name">Bioinformatics &amp; Lab Research</div>
+        <div class="stack-desc">Nested PCR, RFLP, molecular surveillance of P. falciparum — research project page coming soon.</div>
+      </a>
 
-<div class="justify">
-<h2>Publication</h2>
-<p>Adesina, O.H. (2019).
-<br>Molecular Characterization of Y184F Polymorphism in the MDR-1 Gene of Plasmodium falciparum parasites obtained from Kano State, Nigeria.
-<br>Undergraduate research project, Redeemer’s University, Osun State, Nigeria.
-<br>Available via the Redeemer’s University OPAC: https://ttl.run.edu.ng/cgi-bin/koha/opac-detail.pl?biblionumber=38893</p> 
+    </div>
+  </div>
+</section>
 
-</div>
-						</article>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Dengue Virus Project</h2>
-								<span class="image main"><img src="images/Protein.png" alt="" /></span>
-								<p>A study to demonstrate computational drug discovery by implementing Machine Learning techniques in the drug discovery process. The ML models used are the Support Vector Machine and Binary Logistic Regression models, which were used to predict the bioactivity class of the molecules using Lipinski Descriptors. Check out my <a href="https://github.com/OlajumokeAdesina/DENV-Project">awesome work</a>. </br> The software used for this project is Python programming language in Google Colaboratory which is built on top of Jupyter Notebook. The research conducted in this project involves the analysis of secondary data gotten from open-source databases ChEMBL and Kaggle. The ChEMBL dataset was accessed 12th August 2022 and the Kaggle dataset was accessed 28th August 2022.</p>
-							</article>
+      <div class="timeline-item">
+        <div class="tl-date">Sep 2025 – Present</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Data Scientist</div>
+          <div class="tl-company">First Bank, Nigeria</div>
+          <div class="tl-body">Built interactive Power BI dashboards to monitor product performance, data quality, and operational KPIs for business stakeholders. Improved data accuracy and reduced reporting time by 80% through automation of validation and transformation processes using Azure DevOps, Databricks, Python, and SQL.</div>
+        </div>
+      </div>
 
-						<!-- Work -->
-						<article id="work">
-							<h2 class="major">Online Retail Data Project</h2>
-							<span class="image main"><img src="images/Online-Shopping-1170x656-537113644" alt="" /></span>
-							<p>In this project, I used Excel to analyse dummy online retail data and create visualisations and a dashboard. </p>
-							<ul class="actions special">
-							<li><a href="https://github.com/OlajumokeAdesina/Portfolio-Projects/blob/main/Online_Retail_Data.xlsx" class="button">View Project</a></li>
-					</ul>
-				</article>
-				</br> 
+      <div class="timeline-item">
+        <div class="tl-date">May 2024 – Feb 2025</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Application Support Analyst</div>
+          <div class="tl-company">CDP, London</div>
+          <div class="tl-body">Provided 2nd-line support for internal and external stakeholders, ensuring SLA-compliant resolution of tickets and technical issues. Developed user guides and supported UAT for platform features. Built strong cross-functional communication and bug triage foundations.</div>
+        </div>
+      </div>
 
-					</header>
-						<article id="work">
-							<h2 class="major">Tableau Visualisation Project</h2>
-							<span class="image main"><img src="images/chart" alt="" /></span>
-							<p>In this project, I used Tableau to create visualisations and a dashboard using Superstore Sales data. Dataset Source: Kaggle.</p>
-							<ul class="actions special">
-							<li><a href="https://public.tableau.com/app/profile/olajumoke.adesina" class="button">View Project</a></li>
-					</ul>
-				</article>
-			</br>
+      <div class="timeline-item">
+        <div class="tl-date">Apr 2023 – Apr 2024</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Junior Systems Analyst</div>
+          <div class="tl-company">CDP, London</div>
+          <div class="tl-body">Utilised SQL to query and validate data for diagnostics and report automation. Applied troubleshooting using Postman API to validate data flows and system interoperability. Created and updated technical documentation covering data pipelines, reporting logic, and user journeys.</div>
+        </div>
+      </div>
 
-				</header>
-				<article id="work">
-					<h2 class="major">SQL Data Exploration Project</h2>
-					<span class="image main"><img src="images/organic food.jpeg" alt="" /></span>
-					<p>In this project, I used MySQL to explore and manipulate a Grocery store dataset. Dataset Source: Kaggle. </p>
-					<ul class="actions special">
-					<li><a href="https://github.com/OlajumokeAdesina/Portfolio-Projects/blob/main/Portfolio.sql" class="button">View Project</a></li>
-			</ul>
-		</article>
+      <div class="timeline-item">
+        <div class="tl-date">Aug 2022 – Jan 2023</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Data Analytics &amp; AI Associate</div>
+          <div class="tl-company">Intelance Digital Enablement Services</div>
+          <div class="tl-body">Designed and created automations for Microsoft Dynamics 365 using Power Automate and Power Apps, significantly reducing data processing time and improving pipeline efficiency.</div>
+        </div>
+      </div>
 
+      <div class="timeline-item">
+        <div class="tl-date">Jan 2020 – Nov 2020</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Laboratory Assistant</div>
+          <div class="tl-company">Chi Farms Limited, Nigeria</div>
+          <div class="tl-body">Collected and processed food samples, prepared culture media, inoculated Petri dishes for microbial analysis, and compiled quality control reports in strict adherence to health and safety protocols.</div>
+        </div>
+      </div>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+      <div class="timeline-item">
+        <div class="tl-date">Jan 2018 – Jul 2018</div>
+        <div class="tl-line"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+        <div class="tl-content">
+          <div class="tl-role">Laboratory Assistant</div>
+          <div class="tl-company">MeCure Healthcare Limited, Nigeria</div>
+          <div class="tl-body">Collected and prepared biological samples for diagnostic testing including phlebotomy. Maintained confidential patient records in compliance with data protection standards.</div>
+        </div>
+      </div>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+    </div>
+  </div>
+</section>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-label">Competencies</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-title">Data Science &amp; Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">SVM</span>
+          <span class="skill-tag">Binary Logistic Regression</span>
+          <span class="skill-tag">Feature Engineering</span>
+          <span class="skill-tag">Model Evaluation</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Cloud &amp; Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Azure Databricks</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Power Automate</span>
+          <span class="skill-tag">Power Apps</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Postman API</span>
+          <span class="skill-tag">JIRA</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Data &amp; Reporting Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Excel (Advanced)</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">Google Colaboratory</span>
+          <span class="skill-tag">Jupyter Notebook</span>
+          <span class="skill-tag">Microsoft Dynamics 365</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Laboratory &amp; Bioinformatics</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Nested PCR</span>
+          <span class="skill-tag">RFLP</span>
+          <span class="skill-tag">Gel Electrophoresis</span>
+          <span class="skill-tag">Microbial Culture</span>
+          <span class="skill-tag">Aseptic Techniques</span>
+          <span class="skill-tag">GLP</span>
+          <span class="skill-tag">Wet-Lab Diagnostics</span>
+          <span class="skill-tag">ChEMBL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-year">Sep 2021 – Dec 2022</div>
+        <div class="edu-degree">MSc Applied Artificial Intelligence &amp; Data Analytics</div>
+        <div class="edu-school">University of Bradford, United Kingdom — Merit (with Honours)</div>
+        <div class="edu-detail">Dissertation: The Application of Machine Learning Techniques in Computational Drug Discovery Using Biological Data. Developed SVM and Binary Logistic Regression models to classify drug-like molecules against Dengue Virus serotype 2, achieving 98.5–99% classification accuracy.<br><br>Supervised by Dr. Olusoyi Ashaye.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-year">Aug 2015 – Jun 2019</div>
+        <div class="edu-degree">BSc Microbiology</div>
+        <div class="edu-school">Redeemer's University, Nigeria — Second Class Upper (2:1) with Honours</div>
+        <div class="edu-detail">Undergraduate research conducted at the Institute of Genomics and Global Health (ACEGID). Performed nested PCR and RFLP on Plasmodium falciparum DNA samples to detect Y184F polymorphism in the MDR-1 gene.<br><br>Supervised by Professor Christian Happi and Dr. Tolulope Kayode.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-								<section>
-									<h3 class="major">Lists</h3>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's Connect</h2>
+    <p class="contact-sub">Open to opportunities in data science, machine learning, and AI research.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:adesinahelen6@outlook.com">adesinahelen6@outlook.com</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/olajumoke-adesina-910566177" target="_blank">LinkedIn Profile</a>
+      <a class="btn btn-outline" href="https://github.com/OlajumokeAdesina" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+<footer>
+  <p>&copy; 2025 Olajumoke Helen Adesina. Designed with care.</p>
+</footer>
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h1>Icons</h1>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
